@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>BMI Calculator</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-item active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-item">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="calculator.html" class="nav-item">Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="welcome-card">
+                <div class="hero-section">
+                    <h1 class="hero-title">Welcome to BMI Calculator</h1>
+                    <p class="hero-subtitle">Calculate your Body Mass Index and take control of your health</p>
+                    <div class="hero-buttons">
+                        <a href="calculator.html" class="btn-primary">
+                            <i class="fas fa-calculator"></i>
+                            Calculate BMI
+                        </a>
+                        <a href="about.html" class="btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Accurate Calculation</h3>
+                        <p>Get precise BMI calculations using the standard formula with support for multiple units.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Unit Converter</h3>
+                        <p>Switch between metric and imperial units. Convert pounds to kg, feet/inches to cm.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Responsive design that works perfectly on all devices - desktop, tablet, and mobile.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Health Insights</h3>
+                        <p>Get personalized recommendations based on your BMI category and age group.</p>
+                    </div>
+                </div>
+
+                <div class="quick-stats">
+                    <h2>BMI Categories</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item underweight">
+                            <div class="stat-range">Below 18.5</div>
+                            <div class="stat-label">Underweight</div>
+                        </div>
+                        <div class="stat-item normal">
+                            <div class="stat-range">18.5 - 24.9</div>
+                            <div class="stat-label">Normal Weight</div>
+                        </div>
+                        <div class="stat-item overweight">
+                            <div class="stat-range">25.0 - 29.9</div>
+                            <div class="stat-label">Overweight</div>
+                        </div>
+                        <div class="stat-item obese">
+                            <div class="stat-range">30.0 and above</div>
+                            <div class="stat-label">Obese</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Check Your BMI?</h2>
+                    <p>It only takes a few seconds to calculate your Body Mass Index and get personalized health insights.</p>
+                    <a href="calculator.html" class="btn-primary large">
+                        <i class="fas fa-calculator"></i>
+                        Start Calculating
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-dot dot-1"></div>
+        <div class="floating-dot dot-2"></div>
+        <div class="floating-dot dot-3"></div>
+        <div class="floating-dot dot-4"></div>
+        <div class="floating-dot dot-5"></div>
+        <div class="floating-dot dot-6"></div>
+        
+        <div class="floating-icon icon-1">
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="floating-icon icon-2">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-icon icon-3">
+            <i class="fas fa-dumbbell"></i>
+        </div>
+        <div class="floating-icon icon-4">
+            <i class="fas fa-apple-alt"></i>
+        </div>
+        
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

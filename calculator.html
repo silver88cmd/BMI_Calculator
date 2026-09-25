@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>BMI Calculator</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-item">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about.html" class="nav-item">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/calculator.html" class="nav-item active">Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="calculator-layout">
+                <!-- Form Section -->
+                <div class="calculator-form-section">
+                    <div class="calculator-card">
+                        <h1 class="title">BMI Calculator</h1>
+                        <p class="subtitle">Calculate your Body Mass Index</p>
+
+                        <!-- Gender Toggle -->
+                        <div class="gender-toggle-container">
+                            <label class="gender-toggle">
+                                <input type="radio" name="gender" value="male" id="male" checked>
+                                <div class="toggle-option male-option">
+                                    <i class="fas fa-mars"></i>
+                                    <span>Male</span>
+                                </div>
+                            </label>
+                            <label class="gender-toggle">
+                                <input type="radio" name="gender" value="female" id="female">
+                                <div class="toggle-option female-option">
+                                    <i class="fas fa-venus"></i>
+                                    <span>Female</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- BMI Calculator Form -->
+                        <form class="bmi-form" id="bmiForm">
+                            <!-- Weight Input with Unit Converter -->
+                            <div class="input-group">
+                                <div class="input-container">
+                                    <label for="weight">Weight</label>
+                                    <div class="unit-converter">
+                                        <div class="input-box">
+                                            <input type="number" id="weight" name="weight" placeholder="70" min="1" max="300" required>
+                                            <span class="unit-label" id="weightUnit">kg</span>
+                                        </div>
+                                        <button type="button" class="unit-toggle" id="weightToggle" onclick="toggleWeightUnit()">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            <span>Switch to lbs</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Height Input with Unit Converter -->
+                                <div class="input-container">
+                                    <label for="height">Height</label>
+                                    <div class="unit-converter">
+                                        <div class="input-box">
+                                            <input type="number" id="height" name="height" placeholder="170" min="50" max="250" required>
+                                            <span class="unit-label" id="heightUnit">cm</span>
+                                        </div>
+                                        <button type="button" class="unit-toggle" id="heightToggle" onclick="toggleHeightUnit()">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            <span>Switch to ft/in</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Height in Feet/Inches (hidden by default) -->
+                            <div class="height-feet-inches" id="heightFeetInches" style="display: none;">
+                                <div class="input-group">
+                                    <div class="input-container">
+                                        <label for="heightFeet">Feet</label>
+                                        <div class="input-box">
+                                            <input type="number" id="heightFeet" name="heightFeet" placeholder="5" min="1" max="8">
+                                            <span class="unit-label">ft</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-container">
+                                        <label for="heightInches">Inches</label>
+                                        <div class="input-box">
+                                            <input type="number" id="heightInches" name="heightInches" placeholder="8" min="0" max="11">
+                                            <span class="unit-label">in</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Age Input -->
+                            <div class="age-container">
+                                <label for="age">Age</label>
+                                <div class="input-box">
+                                    <input type="number" id="age" name="age" placeholder="25" min="1" max="120" value="25" required>
+                                    <span class="unit-label">years</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-calculator"></i>
+                                Calculate BMI
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="calculator-results-section">
+                    <div class="results" id="results" style="display: none;">
+                        <div class="bmi-result">
+                            <h3>Your BMI</h3>
+                            <div class="bmi-value" id="bmiValue">0</div>
+                            <div class="bmi-category" id="bmiCategory">Normal</div>
+                        </div>
+                        <div class="bmi-chart">
+                            <div class="chart-bar">
+                                <div class="chart-fill" id="chartFill"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>Underweight</span>
+                                <span>Normal</span>
+                                <span>Overweight</span>
+                                <span>Obese</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-dot dot-1"></div>
+        <div class="floating-dot dot-2"></div>
+        <div class="floating-dot dot-3"></div>
+        <div class="floating-dot dot-4"></div>
+        <div class="floating-dot dot-5"></div>
+        <div class="floating-dot dot-6"></div>
+        
+        <div class="floating-icon icon-1">
+            <i class="fas fa-calculator"></i>
+        </div>
+        <div class="floating-icon icon-2">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-icon icon-3">
+            <i class="fas fa-weight"></i>
+        </div>
+        <div class="floating-icon icon-4">
+            <i class="fas fa-ruler"></i>
+        </div>
+        
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

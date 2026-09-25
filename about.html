@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>BMI Calculator</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-item">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-item active">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="calculator.html" class="nav-item">Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="about-card">
+                <h1 class="about-title">About BMI Calculator</h1>
+                
+                <div class="about-section">
+                    <h2><i class="fas fa-info-circle"></i> What is BMI?</h2>
+                    <p>Body Mass Index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. It's a useful screening tool to identify potential weight problems, though it doesn't directly measure body fat.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2><i class="fas fa-calculator"></i> How is BMI Calculated?</h2>
+                    <div class="formula-box">
+                        <h3>BMI Formula</h3>
+                        <div class="formula">
+                            <span class="formula-text">BMI = Weight (kg) ÷ Height (m)²</span>
+                        </div>
+                        <p class="formula-note">Or in imperial units: BMI = (Weight in pounds × 703) ÷ (Height in inches)²</p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2><i class="fas fa-chart-bar"></i> BMI Categories</h2>
+                    <div class="bmi-categories">
+                        <div class="category-item">
+                            <div class="category-color underweight"></div>
+                            <div class="category-info">
+                                <h4>Underweight</h4>
+                                <p>BMI below 18.5</p>
+                                <small>May indicate malnutrition, eating disorders, or other health problems.</small>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color normal"></div>
+                            <div class="category-info">
+                                <h4>Normal Weight</h4>
+                                <p>BMI 18.5 - 24.9</p>
+                                <small>Considered a healthy weight range for most adults.</small>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color overweight"></div>
+                            <div class="category-info">
+                                <h4>Overweight</h4>
+                                <p>BMI 25.0 - 29.9</p>
+                                <small>May increase risk of health problems like heart disease and diabetes.</small>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-color obese"></div>
+                            <div class="category-info">
+                                <h4>Obese</h4>
+                                <p>BMI 30.0 and above</p>
+                                <small>Significantly increases risk of serious health conditions.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Important Limitations</h2>
+                    <div class="limitations">
+                        <div class="limitation-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h4>Muscle Mass</h4>
+                                <p>BMI doesn't distinguish between muscle and fat. Athletes with high muscle mass may have a high BMI but low body fat.</p>
+                            </div>
+                        </div>
+                        <div class="limitation-item">
+                            <i class="fas fa-baby"></i>
+                            <div>
+                                <h4>Age Considerations</h4>
+                                <p>BMI interpretation may vary for children, teenagers, and adults over 65. Consult healthcare providers for these age groups.</p>
+                            </div>
+                        </div>
+                        <div class="limitation-item">
+                            <i class="fas fa-venus-mars"></i>
+                            <div>
+                                <h4>Gender Differences</h4>
+                                <p>Men and women may have different body compositions at the same BMI due to natural differences in muscle and fat distribution.</p>
+                            </div>
+                        </div>
+                        <div class="limitation-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Ethnicity</h4>
+                                <p>BMI thresholds may need adjustment for different ethnic groups due to varying body compositions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2><i class="fas fa-heart"></i> Health Recommendations</h2>
+                    <div class="recommendations">
+                        <div class="recommendation-card">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Healthy Diet</h4>
+                            <p>Focus on whole foods, fruits, vegetables, lean proteins, and whole grains. Limit processed foods and added sugars.</p>
+                        </div>
+                        <div class="recommendation-card">
+                            <i class="fas fa-running"></i>
+                            <h4>Regular Exercise</h4>
+                            <p>Aim for at least 150 minutes of moderate-intensity exercise per week, including both cardio and strength training.</p>
+                        </div>
+                        <div class="recommendation-card">
+                            <i class="fas fa-bed"></i>
+                            <h4>Quality Sleep</h4>
+                            <p>Get 7-9 hours of quality sleep per night. Poor sleep can affect metabolism and weight management.</p>
+                        </div>
+                        <div class="recommendation-card">
+                            <i class="fas fa-user-md"></i>
+                            <h4>Regular Check-ups</h4>
+                            <p>Consult healthcare providers for personalized advice, especially if you have concerns about your weight or health.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <h3><i class="fas fa-info"></i> Medical Disclaimer</h3>
+                    <p>This BMI calculator is for informational purposes only and should not replace professional medical advice. Always consult with a healthcare provider for health-related decisions, especially if you have concerns about your weight or health status.</p>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Calculate Your BMI?</h2>
+                    <p>Use our accurate BMI calculator with unit conversion features to get started on your health journey.</p>
+                    <a href="index.html" class="btn-primary large">
+                        <i class="fas fa-calculator"></i>
+                        Calculate Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-dot dot-1"></div>
+        <div class="floating-dot dot-2"></div>
+        <div class="floating-dot dot-3"></div>
+        <div class="floating-dot dot-4"></div>
+        <div class="floating-dot dot-5"></div>
+        <div class="floating-dot dot-6"></div>
+        
+        <div class="floating-icon icon-1">
+            <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="floating-icon icon-2">
+            <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="floating-icon icon-3">
+            <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="floating-icon icon-4">
+            <i class="fas fa-question-circle"></i>
+        </div>
+        
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
